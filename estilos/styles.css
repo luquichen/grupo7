@@ -34,7 +34,7 @@ body{
 
 
 .bienvenida h1{
-        font-size: 64px;
+        font-size: clamp(3rem, 10vw, 4rem);
         max-width: 24ch;
         font-weight: bold;
         margin-top: 12rem;
