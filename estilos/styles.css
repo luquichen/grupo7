@@ -1,38 +1,60 @@
 :root{
     --font-family-primary: 'Montserrat', sans-serif; 
     --font-family-secondary: 'Roboto', sans-serif;
+    --primary-color: #18120E;
+    --secondary-color: #2d1d11;
+    --text-color: #FAE9CF;
+}
+
+html {
+  scrollbar-gutter: stable;
 }
 
 body{
+    background-color: var(--primary-color);
     font-family: var(--font-family-primary);
+    color: var(--text-color);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+
 }
 .navbar {
-            background-color: #28a745; /* Verde */
+            background-color: var(--primary-color); /* Verde */
         }
 
         .navbar-brand, .nav-link {
-            color: #fff; /* Blanco */
+            color: var(--text-color); /* Blanco */
             font-size: 20px;
         }
 
         .nav-link:hover {
-            color: #d4edda; /* Verde claro al hacer hover */
+            color: #FAF9AF;
         }
 
-.bienvenida{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 
-}
 .bienvenida h1{
-        font-size: 80px;
+        font-size: 64px;
+        max-width: 24ch;
         font-weight: bold;
+        margin-top: 12rem;
 }        
 
 .bienvenida span{
-    color: #28a745;
+    color: #FAF9AF;
+}
+
+.navbar-brand {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  transition: rotate 150ms ease-in;
+}
+
+
+.navbar-brand:hover {
+  color: var(--text-color);
+  rotate: 180deg;
 }
 
 
@@ -40,15 +62,15 @@ body{
     margin-top: 5rem;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 32px;
+    padding: 32px;
+    flex-wrap: wrap;
   }
   
   .profile-card {
-    background-color: #fff;
+    flex-basis: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
     padding: 20px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -64,27 +86,51 @@ body{
   .profile-info h2 {
     margin: 10px 0;
     font-size: 24px;
-    color: #333;
+    color: var(--text-color);
   }
   
   .profile-info p {
-    color: #777;
+    color: var(--text-color);
+    opacity: 0.6;
     font-size: 16px;
   }
   
   .profile-links {
+    display: flex;
+    gap: 1rem;
     margin-top: 20px;
+    justify-content: center;
+    align-self: end;
+    flex-wrap: wrap;
   }
   
   .profile-links a {
+    text-transform: uppercase;
     text-decoration: none;
-    color: #28a745; 
+    color: var(--secondary-color);
+    padding: 1rem 2rem; 
     font-weight: bold;
     margin: 0 10px;
-    transition: color 0.3s;
+    transition: all 0.15s ease-in;
+    background-color: var(--text-color);
+    border-radius: 2rem;
   }
   
   .profile-links a:hover {
-    color: #333; 
+    background-color: var(--secondary-color);
+    color: var(--text-color); 
   }
   
+  footer {
+    display: flex;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 auto;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(89%) sepia(16%) saturate(621%) hue-rotate(325deg) brightness(107%) contrast(96%);
+  }
